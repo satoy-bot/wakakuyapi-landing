@@ -3,3 +3,13 @@ compatibility_date = "2024-01-01"
 
 [assets]
 directory = "./dist"
+
+[[routes]]
+pattern = "wakakuyapi.com"
+custom_domain = true
+zone_name = "wakakuyapi.com"
+
+[[routes]]
+pattern = "www.wakakuyapi.com"
+custom_domain = true
+zone_name = "wakakuyapi.com"
