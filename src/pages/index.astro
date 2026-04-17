@@ -1,17 +1,19 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Sponsorship from '../components/Sponsorship.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout 
+  title="Wakakuyapi · Full-Service Media Production & Streaming"
+  description="Professional video production, live streaming, podcast services, and media consulting. Quality content that moves audiences. Partner with Wakakuyapi today."
+>
+  <Hero />
+  <Services />
+  <Sponsorship />
+  <ContactForm />
+  <Footer />
+</Layout>

@@ -1,0 +1,43 @@
+---
+const tiers = [
+  {
+    name: "Bronze",
+    price: "$500",
+    description: "Brand visibility across our content platforms. Your logo featured on our website and social media profiles, plus monthly shout-outs in podcast episodes and video descriptions.",
+    featured: false
+  },
+  {
+    name: "Silver",
+    price: "$1,500",
+    description: "Everything in Bronze, plus dedicated video segments featuring your product or service. Custom content that highlights your value proposition with creative storytelling.",
+    featured: true
+  },
+  {
+    name: "Gold",
+    price: "$3,000",
+    description: "Everything in Silver, plus a custom content series co-created with your team. Full campaign integration across all platforms with exclusive audience engagement.",
+    featured: false
+  }
+];
+---
+
+<section id="sponsorship" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-8 text-gray-900">Partner With Wakakuyapi</h2>
+    <p class="text-xl text-center text-gray-700 mb-16 max-w-3xl mx-auto">
+      Reach engaged audiences across YouTube, podcasts, and social media with consistent, high-quality content. Align your brand with creativity and a community that values quality.
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {tiers.map((tier) => (
+        <div class={`bg-white p-8 rounded-lg ${tier.featured ? 'ring-4 ring-blue-600 transform scale-105' : 'hover:shadow-lg'} transition-all`}>
+          <h3 class="text-2xl font-bold mb-2 text-gray-900">{tier.name}</h3>
+          <div class="text-4xl font-bold mb-6 text-blue-600">{tier.price}<span class="text-lg text-gray-600">/mo</span></div>
+          <p class="text-gray-700 leading-relaxed mb-6">{tier.description}</p>
+          <a href="#contact" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Get Started
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
